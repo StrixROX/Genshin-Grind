@@ -6,5 +6,5 @@ export const GET = async () => {
   const db = await client.db("genshindb")
   const avatars = await db.collection("weapon")
 
-  return NextResponse.json(await avatars.find().filter({types: {$exists: false}}).toArray())
+  return NextResponse.json(await avatars.find().project({_id: 0}).filter({types: {$exists: false}}).toArray())
 }
