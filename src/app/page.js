@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <h1>Genshin Grind</h1>
       <TargetSelector onSubmit={(data) => setTargets(data)} />
-      <p>Selected: {JSON.stringify(targets.map(el => el.name + ` (${el.element})`))}</p>
+      <p>Selected: {JSON.stringify(targets.map(el => el.name + (el.element ? ` (${el.element})` : '')))}</p>
     </>
   )
 }
