@@ -97,6 +97,10 @@ export default function TargetSelector({ onSubmit }) {
 
     onSubmit(selectedTargets)
   }
+  function handleReset() {
+    setSelected([])
+    onSubmit([])
+  }
 
   return (
     <>
@@ -125,6 +129,7 @@ export default function TargetSelector({ onSubmit }) {
         }
       </div>
       <button onClick={handleSubmit}>Done</button>
+      <button onClick={handleReset}>Reset</button>
     </>
   )
 }
