@@ -104,7 +104,7 @@ export default function TargetSelector({ onSubmit }) {
         <button onClick={() => setTargetType('avatar')}>Characters</button>
         <button onClick={() => setTargetType('weapon')}>Weapons</button>
       </div>
-      <div className="selector" style={{display: 'flex', flexWrap: 'wrap'}}>
+      <div className="selector" style={{display: 'flex', flexWrap: 'wrap', maxHeight: 300, overflow: 'auto'}}>
         {
           Object.values(targets).map((el, i) => {
             if (targetType === 'avatar') {
