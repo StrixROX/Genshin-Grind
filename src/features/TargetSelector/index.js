@@ -19,6 +19,7 @@ export default function TargetSelector({ onSubmit }) {
       const formattedData = {}
       for (let i in res) {
         formattedData[res[i].id] = res[i]
+        formattedData[res[i].id].type = 'avatar'
       }
       setAvatars(formattedData)
       
@@ -31,6 +32,7 @@ export default function TargetSelector({ onSubmit }) {
       const formattedData = {}
       for (let i in res) {
         formattedData[res[i].id] = res[i]
+        formattedData[res[i].id].type = 'weapon'
       }
       setWeapons(formattedData)
 
